@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Cyborg Games</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="home.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>         
+                    <!-- ***** Logo End ***** -->
+                     <ul class="nav">
+                        <li><h4><em>Sign Up</em></h4></li>
+                        <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul> 
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+         
+          <div class="main-banner">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="header-text">
+                  <form>
+              <div class="form-group">
+                <h4><em>Username:</em></h4>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                <h4><em>Sex:</em></h4>
+                <label class="radio-inline"><input type="radio" name="sex" value="male" required><h5>Male</h5></label>
+                <label class="radio-inline"><input type="radio" name="sex" value="female" required><h5>Female</h5></label>
+              </div>
+              <div class="form-group">
+                <h4><em>Password:</em></h4>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+            
+            <button type="submit"  class="btn"> Sign up </button>
+          </form>
+          <a href="index.html">I already have an account.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Signup successful</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Your account has been successfully created.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+<script>
+      // Get the signup form element
+      var signupForm = document.querySelector("form");
+      
+      // Get the modal element
+      var modal = document.getElementById("exampleModal");
+      
+      // Add an event listener for the form submission
+      signupForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+      
+        // Get the user's input from the form
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;      
+      
+        // Store the username and password in localStorage
+        localStorage.setItem(username, password);
+        
+        // Show the success modal
+        var modal = new bootstrap.Modal(document.getElementById('exampleModal'), {});
+        modal.show();
+        // Redirect to the home page after a short delay
+          setTimeout(function() {
+            window.location.href = "index.html";
+          }, 2000);
+      });
+      </script> 
+
+  </body>
+</html>

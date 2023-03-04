@@ -1,0 +1,21 @@
+.btn {
+   font-size: 14px;
+  color: #fff;
+  background-color: #e75e8d;
+  margin: 20px;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+#visible  {
+  border: 1px solid #e75e8d;
+  border-collapse: collapse;
+  
+}
+th, td {
+  padding: 15px;
+}
+
